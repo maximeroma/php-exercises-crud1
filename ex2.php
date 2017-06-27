@@ -7,14 +7,14 @@ catch (Exception $e)
 {
     die('Erreur : ' . $e->getMessage());
 }
-$reponse = $bdd->query('SELECT * FROM clients');
+$reponse = $bdd->query('SELECT * FROM showTypes');
 
 ?>
 
 <ul>
   <?php
   while($donnees=$reponse->fetch()){
-    echo '<li>'. $donnees['firstName'] ." ".$donnees['lastName']. '</li>';
+    echo '<li>'. $donnees['type'] . '</li>';
   }
   ?>
 </ul>
