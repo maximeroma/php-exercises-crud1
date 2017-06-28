@@ -7,7 +7,7 @@ catch (Exception $e)
 {
     die('Erreur : ' . $e->getMessage());
 }
-$reponse = $bdd->query("SELECT * FROM clients WHERE lastName LIKE 'm%' OR firstName LIKE 'm%'" );
+$reponse = $bdd->query("SELECT * FROM clients WHERE lastName LIKE 'm%' ORDER BY lastName OR firstName LIKE 'm%'" );
 
 ?>
 
